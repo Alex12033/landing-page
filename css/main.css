@@ -53,6 +53,14 @@ nav {
     margin-top: 180px;
 }
 
+.menu a:hover {
+    background-color: rgb(228, 29, 29);
+    border-radius: 3px;
+    opacity: 0.6;
+    box-shadow:  8px 5px 10px rgb(241, 238, 238);
+    transition: 0.4s;
+}
+
 .title__first {
     font-size: 40px;
     color: white;
