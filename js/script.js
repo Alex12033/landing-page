@@ -25,6 +25,48 @@ function showModalByScroll() {
 }
 window.addEventListener('scroll', showModalByScroll);
 
+//send data from modal input form with ajax
+
+const form = document.querySelector('form');
+const formBtn = document.querySelector('.btn');
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const req = new XMLHttpRequest();
+        req.open('POST', 'server.php');
+
+        req.setRequestHeader('Content-type', 'aplication/json');
+        const formData = new FormData(form);
+
+        const obj = {};
+        formData.forEach(function(key, value) {
+            obj[key] = value;
+        });
+
+        const json = JSON.stringify(obj);
+
+        req.send(json);
+
+        req.addEventListener('load', () => {
+            if (req.status === 200) {
+                console.log(req.response);
+                form.reset();
+                closeModal();
+            } else {
+                console.log("bad");
+            }
+        });
+    });
+
+    
+
+
+
+
+
+
 
 
 
