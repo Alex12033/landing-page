@@ -54,10 +54,9 @@ nav {
 }
 
 .menu a:hover {
-    background-color: rgb(228, 29, 29);
     border-radius: 3px;
-    opacity: 0.6;
-    box-shadow:  8px 5px 10px rgb(241, 238, 238);
+    opacity: 0.5;
+    box-shadow:  1px 5px 18px white;
     transition: 0.4s;
 }
 
